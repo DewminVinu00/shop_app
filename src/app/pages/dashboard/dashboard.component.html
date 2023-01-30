@@ -1,0 +1,104 @@
+
+<div class="split left">
+  <div class="centered">
+
+    <div class="outer-wrapper">
+      <br><br>
+    <div class="wrapper">
+      <div class="title">
+        <h2>Little Laughs</h2>
+           <h3>Update your Feedback</h3>
+      </div>
+      <form #employeeForm="ngForm" (ngSubmit)="onSubmit(employeeForm)">
+        <input type="hidden" name="_id" #_id="ngModel" [(ngModel)]="employeeService.selectedEmployee._id">
+      <div class="form">
+         <div class="inputfield">
+            <label>Name</label>
+            <input type="text" name="name" class="input" #name="ngModel" [(ngModel)]="employeeService.selectedEmployee.name" placeholder="Enter your fullname" required>
+         </div>
+
+          <div class="inputfield">
+            <label>Email</label>
+            <input type="email" name="email" class="input"  #name="ngModel" [(ngModel)]="employeeService.selectedEmployee.email" placeholder="Enter your email">
+         </div>
+
+         <div class="inputfield">
+            <label>Subject</label>
+            <input type="text" name="subject"  class="input" #name="ngModel" [(ngModel)]="employeeService.selectedEmployee.subject" placeholder="Enter your subject">
+         </div>
+
+         <div class="inputfield">
+            <label>Message</label>
+            <input type="text" name="message"  class="input" #name="ngModel" [(ngModel)]="employeeService.selectedEmployee.message" placeholder="Enter your message">
+         </div>
+
+        <div class="inputfield">
+          <button class="btn" type="submit" [disabled]="!employeeForm.valid">Submit</button>
+        </div>
+
+        <div class="inputfield">
+          <button class="btn" type="button" (click)="resetForm(employeeForm)">Reset</button>
+        </div>
+      </div>
+      </form>
+  </div>
+  </div>
+ </div>
+</div>
+
+
+<div class="split right">
+  <div class="centered">
+
+    <div class="outer-wrapper">
+    <div class="table-wrapper">
+    <table id="emp-table">
+        <thead>
+            <th col-index = 1>Name</th>
+
+            <th col-index = 2>Email</th>
+
+            <th col-index = 3>Subject</th>
+
+            <th col-index = 4>Feedback</th>
+
+            <th col-index = 14>UPDATE</th>
+
+            <th col-index = 15>DELETE</th>
+
+
+        </thead>
+
+        <tbody>
+
+            <tr *ngFor="let emp of employeeService.employees">
+              <td>{{emp.name}}</td>
+              <td>{{emp.email}}</td>
+              <td>{{emp.subject}}</td>
+              <td>{{emp.message}}</td>
+              <td>
+                  <a class="action-btn" (click)="onEdit(emp)">
+                    <i class="material-icons">edit</i>
+                  </a>
+              </td>
+              <td>
+                  <a class="action-btn" (click)="onDelete(emp._id,employeeForm)">
+                    <i class="material-icons">delete</i>
+                  </a>
+              </td>
+            </tr>
+        </tbody>
+    </table>
+</div>
+</div>
+  </div>
+</div>
+    <script>
+        window.onload = () =>
+        {
+            console.log(document.querySelector("#emp-table > tbody > tr:nth-child(1) > td:nth-child(2) ").innerHTML);
+        };
+
+        getUniqueValuesFromColumn()
+
+    </script>

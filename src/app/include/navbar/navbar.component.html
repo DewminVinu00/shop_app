@@ -1,0 +1,67 @@
+<header class="main-header">
+  <nav class="navbar navbar-expand-lg navbar-light bg-light navbar-default bootsnav"><h1><span id="head">L</span>ITTLE <span id="head">L</span>AUGHS</h1>
+      <div class="container">
+
+          <div class="navbar-header">
+              <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbar-menu" aria-controls="navbars-rs-food" aria-expanded="false" aria-label="Toggle navigation">
+              <i class="fa fa-bars"></i>
+          </button>
+              <a class="navbar-brand" routerLink="home">
+                  <video width="100" height="100" loop="true" autoplay="autoplay" muted preload="auto" class="logo">
+                    <source src="assets/LittleLaughs3.mp4" type="video/mp4">
+              </video>
+              </a>
+          </div>
+
+          <div class="collapse navbar-collapse" id="navbar-menu">
+              <ul class="nav navbar-nav ml-auto" data-in="fadeInDown" data-out="fadeOutUp">
+                  <li class="nav-item active"><a class="nav-link" routerLink="/home">Home</a></li>
+                  <li class="nav-item"><a class="nav-link" routerLink="/aboutus">About Us</a></li>
+                  <li class="dropdown">
+                      <a href="#" class="nav-link dropdown-toggle arrow" data-toggle="dropdown">SHOP </a>
+                      <ul class="dropdown-menu">
+                          <li><a routerLink="/shop">Sidebar Shop</a></li>
+                          <li><a routerLink="/shopdetails">Shop Detail</a></li>
+                          <li><a routerLink="/myaccount">My Account</a></li>
+                          <li><a href="http://localhost:8080/">Vote</a></li>
+                      </ul>
+                  </li>
+                  <li class="nav-item"><a class="nav-link" routerLink="/gallery">Gallery</a></li>
+                  <li class="nav-item"><a class="nav-link" routerLink="/contactus">Contact Us</a></li>
+              </ul>
+          </div>
+
+          <div class="attr-nav">
+            <ul>
+                <li class="search"><a href="#"><i class="fa fa-search"></i></a></li>
+                <li class="side-menu">
+                <a href="#">
+                  <i class="fa fa-shopping-bag"></i>
+                  <span class="badge">3</span>
+                  <p>My Cart</p>
+                </a>
+              </li>
+
+            </ul>
+        </div>
+
+              <div class="login-box">
+                  <ul>
+                  <li class="side-menu" *ngIf="!loggedin()">
+                       <a class="nav-link" routerLink="register">Sign Up/Sign In</a>
+                  </li>
+                  </ul>
+
+                  <li class="dropdown" id="dropdown" *ngIf="loggedin()">
+                    <a href="#" class="nav-link dropdown-toggle arrow" data-toggle="dropdown">Profile <i class='fas fa-user-circle' style='font-size:24px'></i></a>
+                      <ul class="dropdown-menu">
+                        <li><a (click)="false" id="displayname">Hello, {{data.displayName}}</a></li>
+                        <li><a routerLink="/Dashboard">View Dashboard</a></li>
+                        <li><a  (click)="logout()" id="signout">Log Out</a></li>
+                      </ul>
+                  </li>
+              </div>
+      </div>
+    </nav>
+</header>
+

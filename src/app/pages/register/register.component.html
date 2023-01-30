@@ -1,0 +1,29 @@
+<div class="l-form">
+  <form [formGroup]="signupForm" class="form">
+    <h1 class="form__title">Sign Up</h1>
+      <p class="form__title">Welcome to little laughs ,<br> Create a new account</p>
+
+      <div [ngClass]="className" role="alert">
+        {{message}} <a routerLink="/login" class="text-primary"
+        style="cursor: pointer;">Login Here</a>
+      </div>
+
+        <div class="form__div">
+          <input type="text" class="form__input" placeholder="" formControlName="displayName">
+          <label for="" class="form__label">Display Name</label>
+        </div>
+
+        <div class="form__div">
+          <input type="email" class="form__input" placeholder="" formControlName="email">
+          <label for="" class="form__label">Email</label>
+        </div>
+
+        <div class="form__div">
+          <input type="password" class="form__input" placeholder="" formControlName="password">
+          <label for="" class="form__label">Password</label>
+        </div>
+
+        <input type="submit" class="form__button" value="Create Account" (click)="signup()">
+        <p class="form__title1" routerLink="/login">Already have an acccount? Log In</p>
+  </form>
+</div>

@@ -1,0 +1,19 @@
+<div class="l-form">
+  <form [formGroup]="loginForm" class="form" >
+      <h1 class="form__title">Sign In</h1>
+       <p class="form__title">Welcome to little laughs, you can log here</p>
+
+      <div class="form__div">
+          <input type="email" class="form__input" placeholder="" formControlName="email" required = "true" >
+          <label for="" class="form__label">Email</label>
+      </div>
+
+      <div class="form__div">
+          <input type="password" class="form__input" placeholder="" formControlName="password" required = "true">
+          <label for="" class="form__label">Password</label>
+      </div>
+
+      <input type="submit" class="form__button" value="Login Now" (click)="login()" required = "true">
+      <p class="form__title1" routerLink="/register">Create a New Account? Sign Up</p>
+  </form>
+</div>

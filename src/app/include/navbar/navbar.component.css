@@ -1,0 +1,22 @@
+.login-box{
+color: #000;
+}
+
+.dropdown-menu a{
+  cursor: pointer;
+  color: #fff;
+}
+
+.dropdown-menu a:hover{
+  color: #fff;
+  font-size: 16.5px;
+}
+
+#signout{
+ color: #f27a03;
+}
+
+#displayname{
+  font-size: 18px;
+  color: #fff;
+}

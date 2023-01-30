@@ -1,0 +1,368 @@
+@import url('https://fonts.googleapis.com/css?family=Montserrat:400,700&display=swap');
+
+*
+{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Arial, Helvetica, sans-serif;
+  box-sizing: border-box;
+}
+
+body
+{
+  background: #000;
+  padding: 0 10px;
+}
+
+.wrapper
+{
+  max-width: 600px;
+  width: 100%;
+  background: #fff;
+  margin: 20px auto;
+  box-shadow: 1px 1px 2px rgba(0,0,0,0.125);
+  padding: 30px;
+  overflow: auto;
+}
+
+.wrapper .title
+{
+  font-size: 24px;
+  font-weight: 700;
+  margin-bottom: 25px;
+  text-transform: uppercase;
+  text-align: center;
+}
+
+h3
+{
+ color: #757575;
+}
+
+.wrapper .form
+{
+  width: 100%;
+}
+
+.wrapper .form .inputfield
+{
+  margin-bottom: 15px;
+  display: flex;
+  align-items: center;
+}
+
+.wrapper .form .inputfield label
+{
+   width: 80px;
+   color: #666363;
+   margin-right: 10px;
+  font-size: 14px;
+}
+
+.wrapper .form .inputfield .input,
+.wrapper .form .inputfield .textarea
+{
+  width: 100%;
+  outline: none;
+  border: 1px solid #d5dbd9;
+  font-size: 15px;
+  padding: 8px 10px;
+  border-radius: 3px;
+  transition: all 0.3s ease;
+}
+
+.wrapper .form .inputfield .textarea
+{
+  width: 100%;
+  height: 125px;
+  resize: none;
+}
+
+.wrapper .form .inputfield .custom_select
+{
+  position: relative;
+  width: 100%;
+  height: 40px;
+}
+
+.wrapper .form .inputfield .custom_select:before
+{
+  content: "";
+  position: absolute;
+  top: 12px;
+  right: 10px;
+  border: 8px solid;
+  border-color: #d5dbd9 transparent transparent transparent;
+  pointer-events: none;
+}
+
+.wrapper .form .inputfield .custom_select select
+{
+  -webkit-appearance: none;
+  -moz-appearance:   none;
+  appearance:        none;
+  outline: none;
+  width: 100%;
+  height: 100%;
+  border: 0px;
+  padding: 8px 10px;
+  font-size: 15px;
+  border: 1px solid #d5dbd9;
+  border-radius: 3px;
+}
+
+
+.wrapper .form .inputfield .input:focus,
+.wrapper .form .inputfield .textarea:focus,
+.wrapper .form .inputfield .custom_select select:focus
+{
+  border: 1px solid #fec107;
+}
+
+.wrapper .form .inputfield p
+{
+   font-size: 14px;
+   color: #757575;
+}
+
+.wrapper .form .inputfield .check
+{
+  width: 15px;
+  height: 15px;
+  position: relative;
+  display: block;
+  cursor: pointer;
+}
+
+.wrapper .form .inputfield .check input[type="checkbox"]
+{
+  position: absolute;
+  top: 0;
+  left: 0;
+  opacity: 0;
+}
+
+.wrapper .form .inputfield .check .checkmark
+{
+  width: 15px;
+  height: 15px;
+  border: 1px solid #fec107;
+  display: block;
+  position: relative;
+}
+
+.wrapper .form .inputfield .check .checkmark:before
+{
+  content: "";
+  position: absolute;
+  top: 1px;
+  left: 2px;
+  width: 5px;
+  height: 2px;
+  border: 2px solid;
+  border-color: transparent transparent #fff #fff;
+  transform: rotate(-45deg);
+  display: none;
+}
+
+.wrapper .form .inputfield .check input[type="checkbox"]:checked ~ .checkmark
+{
+  background: #fec107;
+}
+
+.wrapper .form .inputfield .check input[type="checkbox"]:checked ~ .checkmark:before
+{
+  display: block;
+}
+
+.wrapper .form .inputfield .btn
+{
+  width: 40%;
+  padding: 8px 10px;
+  font-size: 15px;
+  border: 0px;
+  background:  #3333cc;
+  color: #fff;
+  cursor: pointer;
+  border-radius: 3px;
+  outline: none;
+  margin-left: 30%;
+}
+
+.wrapper .form .inputfield .btn:hover
+{
+  background: #6600ff;
+  font-size: 15.3px;
+  margin-left: 29.8%;
+}
+
+.wrapper .form .inputfield:last-child
+{
+  margin-bottom: 0;
+}
+
+@media (max-width:420px)
+{
+  .wrapper .form .inputfield
+  {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  .wrapper .form .inputfield label
+  {
+    margin-bottom: 5px;
+  }
+  .wrapper .form .inputfield.terms
+  {
+    flex-direction: row;
+  }
+}
+
+
+
+table
+{
+    background-color: #fff;
+}
+
+.heading
+{
+    display: flex;
+    background-color: #232f3e;
+    box-shadow: 0px 1px 2px #232f3e;
+
+}
+
+.btn
+{
+    width: 10%;
+    height: 35px;
+    align-content: center;
+    margin-left: 50%;
+    margin-top: 10px;
+    font-size: 15px;
+    border: 0px;
+    background: #000070;
+    color: #fff;
+    cursor: pointer;
+    border-radius: 3px;
+    outline: none;
+    margin-right: 10px;
+}
+
+.btn:hover
+{
+    font-size: 15.4px;
+    background: #000098;
+}
+
+h1
+{
+    color: coral;
+    font-weight: bold;
+    margin-left: 20px;
+    background: transparent;
+    padding: 7px;
+}
+
+#h2{
+  font: rgb(255, 255, 255);
+}
+
+.outer-wrapper {
+    margin-top: 40px;
+    margin-left: 20px;
+    margin-right: 20px;
+    border: 0px solid black;
+    border-radius: 4px;
+    box-shadow: 0px 0px 1px rgba(0, 0, 0, 0.9);
+    max-width: fit-content;
+    max-height: fit-content;
+}
+
+.table-wrapper {
+    overflow-y: scroll;
+    overflow-x: scroll;
+    height: fit-content;
+    max-height: 80vh;
+    max-width: 100vh;
+    margin-top: 22px;
+    margin: 15px;
+    padding-bottom: 20px;
+}
+
+
+table {
+    min-width: max-content;
+    border-collapse: separate;
+    border-spacing: 0px;
+}
+
+.table-filter {
+    border-radius: 5px;
+}
+
+table th{
+    position: sticky;
+    top: 0px;
+    background-color: #133b5c;
+    color: rgb(241, 245, 179);
+    text-align: center;
+    font-weight: normal;
+    font-size: 18px;
+    outline: 0.7px solid black;
+    border: 1.5px solid black;
+}
+
+table th, table td {
+
+    padding: 15px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+
+}
+
+table td {
+    text-align: left;
+    font-size: 15px;
+    border: 1px solid rgb(177, 177, 177);
+    padding-left: 20px;
+
+}
+
+.split {
+  height: 100%;
+  width: 50%;
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  overflow-x: hidden;
+  padding-top: 20px;
+}
+
+.left {
+  left: 0;
+  display: block;
+  background-color: #111;
+}
+
+.right {
+  right: 0;
+  display: block;
+  background-color: red;
+}
+
+.centered {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+}
+
+.centered img {
+  width: 150px;
+  border-radius: 50%;
+}
+

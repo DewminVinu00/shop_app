@@ -1,0 +1,34 @@
+.container {
+  position: relative;
+  text-align: center;
+  color: white;
+  text-align: left;
+}
+
+.bottom-left {
+  position: absolute;
+  bottom: 8px;
+  left: 16px;
+}
+
+.cover-slides img{
+  background-repeat: no-repeat;
+  background-size: cover;
+  overflow: hidden;
+  background-color: #000;
+  width: 100%;
+  height: 100vh;
+  background-color: #ffffff;
+  border: 0px solid black;
+  filter: brightness(50%);
+}
+
+#h3{
+  color: #ffb366;
+  padding-left: 30px;
+}
+
+p{
+  color: #000;
+  padding-left: 30px;
+}

@@ -1,0 +1,72 @@
+<div class="top-search">
+  <div class="container">
+      <div class="input-group">
+          <span class="input-group-addon"><i class="fa fa-search"></i></span>
+          <input type="text" class="form-control" placeholder="Search">
+          <span class="input-group-addon close-search"><i class="fa fa-times"></i></span>
+      </div>
+  </div>
+</div>
+
+<div class="all-title-box">
+  <div class="container">
+      <div class="row">
+          <div class="col-lg-12">
+              <h2>Contact Us</h2>
+              <ul class="breadcrumb">
+                  <li class="breadcrumb-item"><a routerLink="/home">Home</a></li>
+                  <li class="breadcrumb-item active"> Contact Us </li>
+              </ul>
+          </div>
+      </div>
+  </div>
+</div>
+
+<div class="contact-box-main">
+  <div class="container">
+      <div class="row">
+          <div class="col-lg-8 col-sm-12">
+              <div class="contact-form-right">
+                  <h2>GET IN TOUCH</h2>
+                   <form id="contactForm" #employeeForm="ngForm" (ngSubmit)="onSubmit(employeeForm)">
+                      <div class="row">
+                        <input type="hidden" name="_id" #_id="ngModel" [(ngModel)]="employeeService.selectedEmployee._id">
+                          <div class="col-md-12">
+                              <div class="form-group">
+                                  <input type="text" class="form-control" placeholder="Your Name" required data-error="Please enter your name" name="name" #name="ngModel" [(ngModel)]="employeeService.selectedEmployee.name" required>
+                                  <div class="help-block with-errors"></div>
+                              </div>
+                          </div>
+                          <div class="col-md-12">
+                              <div class="form-group">
+                                  <input type="email" name="email" #name="ngModel" class="form-control"  required data-error="Please enter your email" [(ngModel)]="employeeService.selectedEmployee.email" placeholder="example@gmail.com">
+                                  <div class="help-block with-errors"></div>
+                              </div>
+                          </div>
+                          <div class="col-md-12">
+                              <div class="form-group">
+                                  <input type="text" name="subject" #name="ngModel" class="form-control" required data-error="Please enter your Subject" [(ngModel)]="employeeService.selectedEmployee.subject" placeholder="Enter your subject">
+                                  <div class="help-block with-errors"></div>
+                              </div>
+                          </div>
+                          <div class="col-md-12">
+                              <div class="form-group">
+                                <input type="text" name="message" #name="ngModel" class="form-control" [(ngModel)]="employeeService.selectedEmployee.message" placeholder="Enter your message">
+
+                                <div class="help-block with-errors"></div>
+                              </div>
+                              <div class="submit-button text-center">
+                                  <button class="btn hvr-hover" type="button" (click)="resetForm(employeeForm)">Reset</button>
+                                  <button class="btn hvr-hover" type="submit" [disabled]="!employeeForm.valid">Submit</button>
+                                  <div id="msgSubmit" class="h3 text-center hidden"></div>
+                                  <div class="clearfix"></div>
+                              </div>
+                          </div>
+                      </div>
+                  </form>
+              </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
